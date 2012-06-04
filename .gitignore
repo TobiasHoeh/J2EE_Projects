@@ -42,3 +42,4 @@ Thumbs.db
 target/
 build/
 .metadata/
+.settings/
