@@ -2,9 +2,9 @@
 <%@ page session="false" %>
 <html>
     <head>
-        <title>Result</title>
+        <title>Home</title>
     </head>
     <body>
-        <h1><c:out value="${output}"></c:out></h1>
+        <h1>Hello world!</h1>
     </body>
 </html>
