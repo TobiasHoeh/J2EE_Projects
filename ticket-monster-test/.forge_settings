@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+<rootpath>"/rest"</rootpath>
+<rest>
+<applicationclass>
+<package>de.tobias.ticketmonster.rest</package>
+<name>C:\/Users/Tobias/moneyPalWorkspace/ticket-monster-test/src/main/java/de/tobias/ticketmonster/rest/JaxRsActivator.java</name>
+</applicationclass>
+</rest>
+</configuration>
