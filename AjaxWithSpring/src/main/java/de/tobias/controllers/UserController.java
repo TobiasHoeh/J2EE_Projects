@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import de.tobias.domain.JsonResponse;
-import de.tobias.domain.User;
+import de.tobias.common.JsonResponse;
+import de.tobias.model.User;
 
 @Controller
 public class UserController {
