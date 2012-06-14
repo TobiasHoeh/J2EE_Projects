@@ -1,85 +1,4 @@
 @charset "UTF-8";
-
-/* Core styles for the page */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #EAECEE;
-    font-family: Verdana, sans-serif;
-    font-size: 0.9em;
-}
-
-#container {
-    margin: 0 auto;
-    border: 1px solid #666666;
-    width: 940px; /* subtract 40px from banner width for padding */
-    background: #FFFFFF url(../img/banner.png) top center no-repeat;
-    background-size: 940px;
-    padding-top: 110px;
-}
-
-section {
-    float: left;
-    width: 555px;
-    margin: 20px;
-}
-
-aside {
-    font-size: 0.9em;
-    width: 220px;
-    float: left;
-    margin: 20px 0px;
-    border: 1px solid #666666;
-    background: #EAECEE;
-    padding: 20px;
-}
-
-aside ul {
-    padding-left: 30px;
-}
-
-footer {
-    clear: both;
-    text-align: center;
-    color: #666666;
-    font-size: 0.85em;
-}
-
-code {
-    font-size: 0.9em;
-}
-
-a {
-    color: #369;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #369;
-    text-decoration: underline;
-}
-
-/* Member registration styles */
-span.invalid {
-    padding-left: 3px;
-    color: red;
-}
-
-label {
-    float: left;
-    width: 15%;
-    margin-left: 20px;
-    margin-right: 0.5em;
-    padding-top: 0.2em;
-    text-align: right;
-    font-weight: bold;
-}
-
-#register {
-    float: left;
-    margin-left: 85px;
-}
-
 /* Custom for Ticket Monster */
 
 body {
@@ -181,10 +100,12 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 .navbar .nav > li > a:hover {
     color:#ce4240;
 }
+
 .navbar .brand {
-    font-family: 'Open Sans', sans-serif;
-    color:#4C5159;
+    color:#565656;
     font-size:14px;
+    text-shadow:0 1px 0 #e7f5f3;
+    font-weight:bold;
 }
 
 
@@ -218,7 +139,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     background:#ECEAE6;
 }
 .accordion-body a {
-    color:#8F8D86;
+    color:#444444;
     text-shadow:0 1px 0 #fff;
 }
 .accordion-body a:hover {
@@ -305,30 +226,6 @@ a.btn-primary:active {
     -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }
-button.btn-danger:hover,
-button.btn-primary:hover {
-    font-weight:bold;
-    color:#fff!important;
-    background:#dc4644 url(../img/btn-pink-hvr.png) top left repeat-x;
-    text-shadow:  0 1px 0  #961311;
-}
-
-input[type='button'].btn-danger:hover,
-input[type='button'].btn-primary:hover {
-    font-weight:bold;
-    color:#fff!important;
-    background:#dc4644 url(../img/btn-pink-hvr.png) top left repeat-x;
-    text-shadow:  0 1px 0  #961311;
-}
-
-input[type='button']:not([disabled]).btn-danger:hover,
-input[type='button']:not([disabled]).btn-primary:hover {
-    font-weight:bold;
-    color:#fff!important;
-    background:#dc4644 url(../img/btn-pink-hvr.png) top left repeat-x;
-    text-shadow:  0 1px 0  #961311;
-}
-
 a.btn-danger:hover,
 a.btn-primary:hover {
     font-weight:bold;
@@ -336,10 +233,6 @@ a.btn-primary:hover {
     background:#dc4644 url(../img/btn-pink-hvr.png) top left repeat-x;
     text-shadow:  0 1px 0  #961311;
 }
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
     background-color: #e24f4d;
@@ -379,6 +272,15 @@ h4.page-header {
     font-size: 16px;
 }
 
+.special-title {
+   font-family: "Rokkitt", serif;
+}
+
+.light-font {
+    text-shadow: 0 1px 1px #000000;
+    color:  #EDF4EA;
+}
+
 
 /* Footer */
 footer {
@@ -390,63 +292,7 @@ footer a {
     border-bottom:1px dotted #ccc;
 }
 
-.booking-status-header {
-    font-family: "Rokkitt", serif
-    text-shadow: 0 1px 1px #000000;
-    color:  #EDF4EA;
-    padding-bottom: 17px;
-    margin: 18px 20px 0px 20px;
-    border-bottom: 1px solid #eeeeee;
-}
 
-.show-status {
-    width: 500px;
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    background-color: #ffffff;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
+.well-icon {
+    float: left;
 }
-
-.show-status-header {
-    border-bottom: 2px solid #eeeeee;
-    font-weight: bold;
-    margin-right: 40px;
-}
-
-.show-status td {
-    padding: 10px;
-    padding-left: 50px;
-}
-
-.performance-status {
-     margin-top: 5px;
-     margin-right: 5px;
-}
-
-.performance-status td {
-    padding: 0px;
-}
-
-.performance-status-progress{
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 18px;
-    width: 120px;
-}
-
-.bot-label {
-    font-weight: bold;
-    font-family: "Rokkitt", serif;
-    font-size: 1.1em;
-    text-shadow: 0 1px 1px #000000;
-    color:  #EDF4EA;
-}
-
-.bot-console {
-    margin-top: 30px;
-    margin-bottom: 5px;
-}
-

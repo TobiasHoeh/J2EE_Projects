@@ -27,7 +27,6 @@ public class ChartService {
 	@Produces(MediaType.TEXT_HTML)
 	@Path("/JqPlot")
 	public String showJqPlotChart() {
-		return new Viewable("jqPlotChart");
-		;
+		return null;
 	}
 }

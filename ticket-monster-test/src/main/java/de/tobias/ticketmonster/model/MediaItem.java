@@ -15,23 +15,19 @@ import org.hibernate.validator.constraints.URL;
 
 /**
  * <p>
- * A reference to a media object such as images, sound bites, video recordings,
- * that can be used in the application.
+ * A reference to a media object such as images, sound bites, video recordings, that can be used in the application.
  * </p>
  * 
  * <p>
- * A media item contains the type of the media, which is required to render it
- * correctly, as well as the URL at which the media should be sourced.
+ * A media item contains the type of the media, which is required to render it correctly, as well as the URL at which the media should be sourced.
  * </p>
  * 
  * @author Marius Bogoevici
  * @author Pete Muir
  */
 /*
- * We suppress the warning about not specifying a serialVersionUID, as we are
- * still developing this app, and want the JVM to generate the serialVersionUID
- * for us. When we put this app into production, we'll generate and embed the
- * serialVersionUID
+ * We suppress the warning about not specifying a serialVersionUID, as we are still developing this app, and want the JVM to generate the
+ * serialVersionUID for us. When we put this app into production, we'll generate and embed the serialVersionUID
  */
 @SuppressWarnings("serial")
 @Entity
@@ -52,13 +48,10 @@ public class MediaItem implements Serializable {
 	 * </p>
 	 * 
 	 * <p>
-	 * The media type is a <em>closed set</em> - as each different type of media
-	 * requires support coded into the view layers, it cannot be expanded upon
-	 * without rebuilding the application. It is therefore represented by an
-	 * enumeration. We instruct JPA to store the enum value using it's String
-	 * representation, so that we can later reorder the enum members, without
-	 * changing the data. Of course, this does mean we can't change the names of
-	 * media items once the app is put into production.
+	 * The media type is a <em>closed set</em> - as each different type of media requires support coded into the view layers, it cannot be expanded
+	 * upon without rebuilding the application. It is therefore represented by an enumeration. We instruct JPA to store the enum value using it's
+	 * String representation, so that we can later reorder the enum members, without changing the data. Of course, this does mean we can't change the
+	 * names of media items once the app is put into production.
 	 * </p>
 	 */
 	@Enumerated(STRING)
@@ -70,13 +63,11 @@ public class MediaItem implements Serializable {
 	 * </p>
 	 * 
 	 * <p>
-	 * The url of the media item forms it's natural id and cannot be shared
-	 * between event categories
+	 * The url of the media item forms it's natural id and cannot be shared between event categories
 	 * </p>
 	 * 
 	 * <p>
-	 * The
-	 * <code>@URL<code> Bean Validation ensures the the URL is, indeed, a valid URL.
+	 * The <code>@URL<code> Bean Validation ensures the the URL is, indeed, a valid URL.
 	 * </p>
 	 */
 	@Column(unique = true)
@@ -105,10 +96,7 @@ public class MediaItem implements Serializable {
 		this.url = url;
 	}
 
-	/*
-	 * toString(), equals() and hashCode() for MediaItem, using the natural
-	 * identity of the object
-	 */
+	/* toString(), equals() and hashCode() for MediaItem, using the natural identity of the object */
 
 	@Override
 	public String toString() {
