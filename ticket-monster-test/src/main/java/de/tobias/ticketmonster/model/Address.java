@@ -1,5 +1,6 @@
 package de.tobias.ticketmonster.model;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
@@ -18,8 +19,11 @@ import javax.persistence.Embeddable;
 public class Address {
 
 	/* Declaration of fields */
+	@Column
 	private String street;
+	@Column
 	private String city;
+	@Column
 	private String country;
 
 	/* Declaration of boilerplate getters and setters */

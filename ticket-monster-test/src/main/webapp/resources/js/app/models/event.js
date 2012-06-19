@@ -1,7 +1,7 @@
 /**
  * Module for the Event model
  */
-define([
+define([ 
     'backbone' // depends and imports Backbone
 ], function (Backbone) {
     /**
@@ -9,7 +9,7 @@ define([
      * Used for CRUD operations against individual events
      */
     var Event = Backbone.Model.extend({
-        urlRoot:'rest/events' // the URL for perfoming CRUD operations
+        urlRoot:'rest/events' // the URL for performing CRUD operations
     });
     // export the Event class
     return Event;

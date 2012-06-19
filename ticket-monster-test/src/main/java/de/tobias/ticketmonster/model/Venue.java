@@ -4,11 +4,11 @@ import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.FetchType.EAGER;
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -22,9 +22,18 @@ import org.hibernate.validator.constraints.NotEmpty;
  * Represents a single venue
  * </p>
  * 
+ * @author Shane Bryzak
+ * @author Pete Muir
  */
+/*
+ * We suppress the warning about not specifying a serialVersionUID, as we are
+ * still developing this app, and want the JVM to generate the serialVersionUID
+ * for us. When we put this app into production, we'll generate and embed the
+ * serialVersionUID
+ */
+@SuppressWarnings("serial")
 @Entity
-public class Venue {
+public class Venue implements Serializable {
 
 	/* Declaration of fields */
 
@@ -47,7 +56,7 @@ public class Venue {
 	 * 
 	 * <p>
 	 * The name must not be null and must be one or more characters, the Bean
-	 * Validation constraint <code>@NotEmpty</code> enforces this.
+	 * Validation constrain <code>@NotEmpty</code> enforces this.
 	 * </p>
 	 */
 	@Column(unique = true)
@@ -57,7 +66,6 @@ public class Venue {
 	/**
 	 * The address of the venue
 	 */
-	@Embedded
 	private Address address = new Address();
 
 	/**
@@ -71,13 +79,12 @@ public class Venue {
 	 * </p>
 	 * 
 	 * <p>
-	 * The <code>@OneToMany<code> JPA mapping establishes this relationship.
-	 * Collection members are fetched eagerly, so that they can be accessed even after the
-	 * entity has become detached. This relationship is bi-directional (a section knows which
-	 * venue it is part of), and the <code>mappedBy</code> attribute establishes
-	 * this. We cascade all persistence operations to the set of performances,
-	 * so, for example if a venue is removed, then all of it's sections will
-	 * also be removed.
+	 * The
+	 * <code>@OneToMany<code> JPA mapping establishes this relationship. TODO Explain EAGER fetch. 
+	 * This relationship is bi-directional (a section knows which venue it is part of), and the <code>mappedBy</code>
+	 * attribute establishes this. We cascade all persistence operations to the
+	 * set of performances, so, for example if a venue is removed, then all of
+	 * it's sections will also be removed.
 	 * </p>
 	 */
 	@OneToMany(cascade = ALL, fetch = EAGER, mappedBy = "venue")
