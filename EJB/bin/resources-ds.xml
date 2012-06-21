@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE datasources PUBLIC "JBoss 5.0/JCA 1.5 datasource configuration" "http://www.jboss.org/j2ee/dtd/jboss-ds_5_0.dtd">
+
+<datasources>
+   <local-tx-datasource>
+   
+      <!-- This file can be outside of the EJB jar, so all DB config can be done on site. -->
+
+      <!-- The jndi name of the DataSource, it is prefixed with java:/ -->
+      <!-- Datasources are not available outside the virtual machine -->
+      <jndi-name>ResourcesDS</jndi-name>
+
+      <!-- where the database resides ;user=sa;password=pwd_Admin -->
+      <!-- <connection-url>jdbc:h2:tcp://localhost///home/mbohnen/Desktop/Vorlesung/wwi09swb/database/data/Person</connection-url>  -->
+      <connection-url>jdbc:h2:mem:personejb</connection-url>
+            
+      <!-- The driver class, ensure finding within JBoss classpath (typically /servername/lib )  -->
+      <driver-class>org.h2.Driver</driver-class>
+
+      <!-- The login and password -->
+      <user-name>sa</user-name>
+      <password>sa</password>
+
+      <!-- The minimum connections in a pool/sub-pool. Pools are lazily constructed on first use -->
+      <min-pool-size>5</min-pool-size>
+
+      <!-- The maximum connections in a pool/sub-pool -->
+      <max-pool-size>30</max-pool-size>
+
+      <!-- The time before an unused connection is destroyed -->
+      <idle-timeout-minutes>60</idle-timeout-minutes>
+      
+      <!-- Statement that is called to check if a pooled connection is alive. -->
+      <!-- IMPORTANT!! Do not remove - else connections will "fall asleep". -->
+      <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+   </local-tx-datasource>
+</datasources>

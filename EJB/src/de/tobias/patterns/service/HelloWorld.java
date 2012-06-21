@@ -1,4 +1,4 @@
-package de.tobias.patterns.slsb;
+package de.tobias.patterns.service;
 
 import javax.ejb.Remote;
 
