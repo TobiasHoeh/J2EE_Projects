@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Decorator" size="903,535" id="de.brockhaus.javase.pattern.decorator" metadata="uml2-1.0" initialized="true" scrolledY="88" tag="1000" key="32303037303533312D313030302042524F3131305F325F325F476F464465636F7261746F725F736F6C7574696F6E2F6D626F686E656E">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0" name="AbstractDecorator" location="54,180" size="178,140" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator" runTimeClassModel="doSomething(),AbstractDecorator(),AbstractDecorator(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="150,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="target" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator#target"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="134,72">
+      <children xsi:type="editmodel:MethodEditModel" name="AbstractDecorator" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator#AbstractDecorator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="AbstractDecorator" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator#AbstractDecorator(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTarget" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator#setTarget(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doSomething" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator#doSomething()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="de.brockhaus.javase.pattern.decorator/BusinessObject&lt;-de.brockhaus.javase.pattern.decorator/AbstractDecorator" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="159,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="18,81"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator-Standard::Call->de.brockhaus.javase.pattern.decorator/BusinessObject" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.1/@children.2" label="//@children.0/@sourceConnections.1/@children.0" sourceEnd="//@children.0/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call»" location="85,96" size="35,13" automaticRelocationAllowed="false" distanceFromWire="40.0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,2" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,76"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.3/@sourceConnections.0 //@children.0/@sourceConnections.1 //@children.4/@sourceConnections.1" name="BusinessObject" location="195,15" size="155,81" id="de.brockhaus.javase.pattern.decorator/BusinessObject" runTimeClassModel="doSomething()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,18">
+      <children xsi:type="editmodel:MethodEditModel" name="doSomething" id="de.brockhaus.javase.pattern.decorator/BusinessObject#doSomething()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.5/@sourceConnections.0" name="LogDecorator" location="60,375" size="142,104" id="de.brockhaus.javase.pattern.decorator/LogDecorator" runTimeClassModel="doSomething(),LogDecorator(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,54">
+      <children xsi:type="editmodel:MethodEditModel" name="LogDecorator" id="de.brockhaus.javase.pattern.decorator/LogDecorator#LogDecorator(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="LogDecorator" id="de.brockhaus.javase.pattern.decorator/LogDecorator#LogDecorator(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doSomething" id="de.brockhaus.javase.pattern.decorator/LogDecorator#doSomething()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="de.brockhaus.javase.pattern.decorator/AbstractDecorator&lt;-de.brockhaus.javase.pattern.decorator/LogDecorator" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="70,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,140"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.0" name="BusinessObjectImpl" location="285,180" size="187,68" id="de.brockhaus.javase.pattern.decorator/BusinessObjectImpl" runTimeClassModel="doSomething()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,18">
+      <children xsi:type="editmodel:MethodEditModel" name="doSomething" id="de.brockhaus.javase.pattern.decorator/BusinessObjectImpl#doSomething()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="de.brockhaus.javase.pattern.decorator/BusinessObject&lt;-de.brockhaus.javase.pattern.decorator/BusinessObjectImpl" source="//@children.3" target="//@children.1" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="32,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="122,81"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TestClient" location="570,15" size="113,81" id="de.brockhaus.javase.pattern.decorator.client/TestClient" runTimeClassModel="main([Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="59,18">
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="de.brockhaus.javase.pattern.decorator.client/TestClient#main([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="de.brockhaus.javase.pattern.decorator.client/TestClient-Standard::Call->de.brockhaus.javase.pattern.decorator/BusinessObjectFactory" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call»" size="35,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,81" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="de.brockhaus.javase.pattern.decorator.client/TestClient-Standard::Call->de.brockhaus.javase.pattern.decorator/BusinessObject" source="//@children.4" target="//@children.1" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call»" size="35,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,40" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="155,40"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SecurityDecorator" location="30,555" size="174,86" id="de.brockhaus.javase.pattern.decorator/SecurityDecorator" runTimeClassModel="doSomething(),SecurityDecorator(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="133,36">
+      <children xsi:type="editmodel:MethodEditModel" name="SecurityDecorator" id="de.brockhaus.javase.pattern.decorator/SecurityDecorator#SecurityDecorator(Lde.brockhaus.javase.pattern.decorator.BusinessObject;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doSomething" id="de.brockhaus.javase.pattern.decorator/SecurityDecorator#doSomething()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="de.brockhaus.javase.pattern.decorator/LogDecorator&lt;-de.brockhaus.javase.pattern.decorator/SecurityDecorator" source="//@children.5" target="//@children.2" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="70,104"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="BusinessObjectFactory" location="540,180" size="209,68" id="de.brockhaus.javase.pattern.decorator/BusinessObjectFactory" runTimeClassModel="getBusinessObject(Z)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="138,18">
+      <children xsi:type="editmodel:MethodEditModel" name="getBusinessObject" id="de.brockhaus.javase.pattern.decorator/BusinessObjectFactory#getBusinessObject(Z)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="de.brockhaus.javase.pattern.decorator/BusinessObjectFactory-Standard::Instantiate->de.brockhaus.javase.pattern.decorator/BusinessObjectImpl" source="//@children.6" target="//@children.3" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate»" size="74,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,34" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="187,34"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

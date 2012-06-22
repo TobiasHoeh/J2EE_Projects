@@ -2,8 +2,8 @@ package de.tobias.patterns.service.impl;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import de.tobias.patterns.service.PersonService;
 import de.tobias.patters.service.data.Person;
@@ -12,7 +12,7 @@ import de.tobias.patters.service.data.Person;
 @Remote(PersonService.class)
 public class PersonServiceBean implements PersonService {
 
-	@Inject
+	@PersistenceContext
 	private EntityManager entityManager;
 
 	@Override

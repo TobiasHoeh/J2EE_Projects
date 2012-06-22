@@ -15,6 +15,10 @@ public class Person implements Serializable {
 	private String vorname;
 	private String nachname;
 
+	public Person() {
+
+	}
+
 	public Person(String vorname, String nachname) {
 		this.vorname = vorname;
 		this.nachname = nachname;
